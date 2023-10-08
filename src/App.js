@@ -3,9 +3,13 @@ import Navbar from './components/Navbar';
 import { TextForm } from './components/TextForm';
 import React,{useState} from 'react'
 import Alert from './components/Alert';
-//import About from './components/About';
-///import {  Route, Routes } from 'react-router-dom';
-//import Contact from './components/Contact';
+import About from './components/About';
+//import {  Route, Routes } from 'react-router-dom';
+import Contact from './components/Contact';
+import {
+  Routes,
+  Route
+} from "react-router-dom";
 
 function App() {
   const [darkMode,setDarkMode] = useState('light');
@@ -56,12 +60,13 @@ function App() {
                 <div className="clas"></div>
                 <Navbar title="TextUtile" mode={darkMode} ChangeColor={ChangeTheme} toggleMode={enableDarkMode}/>
                 <Alert alert={alert}/>
-                {/* <Routes>
+                 <Routes>
                   <Route exact path="/about" element={<About />} />
                   <Route exact path="/contact" element={<Contact />} />
                   <Route exact path="/" element={ <TextForm showAlert={showAlert} heading="enter the text"  mode={darkMode}  />}/>
-                </Routes> */}
-                <TextForm showAlert={showAlert} heading="enter the text"  mode={darkMode}  />
+                </Routes> 
+
+                {/* <TextForm showAlert={showAlert} heading="enter the text"  mode={darkMode}  /> */}
             </>
        );
 }
