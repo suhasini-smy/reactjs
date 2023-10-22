@@ -39,12 +39,14 @@ function App() {
       document.body.style.backgroundColor="white";
       showAlert('Light Mode has enabled','success');
       document.title="text Utiles - grey";
-    }
+     }
   }
 
-  const ChangeTheme = () =>{
-    console.log(darkMode);
-    if(darkMode==="light"){
+  const ChangeTheme = (cls) =>{
+    console.log(cls);
+    
+    if(darkMode==="light")
+    {
       setDarkMode('dark');
       document.body.style.backgroundColor="#eee";
       showAlert('Dark Mode has enabled','success');
